@@ -1,4 +1,5 @@
 def cifrado_cesar (txt):   #funcion cuyo argumento es el texto que se ingresara por consolda 
+    posicion1 = int(input(("Ingrese la llave")))
     alfabeto_min = "abcdefghijklmnopqrstuvwxyz"  #creamos variable con alfabetro en minusculas
     alfabeto_may = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" #creamos variable con alfabeto en mayusculas
     longitud_alfabeto = len(alfabeto_min) #determinamos la longitud de la variable alfabeto
@@ -13,11 +14,12 @@ def cifrado_cesar (txt):   #funcion cuyo argumento es el texto que se ingresara 
         if letra.isupper():     #si la letra es mayuscula
             limite = 65 #limiite unicode mayuscula
             alfabeto_a_usar = alfabeto_may #utilizara el alfabeto mayuscula
-        posicion = (valor_letra - limite + 15) % longitud_alfabeto   #posicioin que movemos a la derecha
+        posicion = (valor_letra - limite + posicion1) % longitud_alfabeto   #posicioin que movemos a la derecha
         codificado_cesar += alfabeto_a_usar[posicion]  #regresa los valores a letras y las concatena
     return codificado_cesar #devuelve la variable codificado_cesar
 
 def descifrado_cesar(mensaje):
+    posicion1 = int(input(("Ingrese la llave")))
     alfabeto_min = "abcdefghijklmnopqrstuvwxyz" #creamos variable con alfabetro en minusculas
     alfabeto_may = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" #creamos variable con alfabetro en minusculas
     longitud_alfabeto = len(alfabeto_min) #determinamos la longitud de la variable alfabeto
@@ -32,7 +34,7 @@ def descifrado_cesar(mensaje):
         if letra.isupper():   #si la letra es mayuscula
             limite = 65  #limiite unicode mayuscula
             alfabeto_a_usar = alfabeto_may #utilizara el alfabeto mayuscula
-        posicion = (valor_letra - limite +11) % longitud_alfabeto #uso el complemento de 26-posicion
+        posicion = (valor_letra - limite +26-posicion1) % longitud_alfabeto #uso el complemento de 26-posicion
 
         
         decod_cesar += alfabeto_a_usar[posicion]  #regresa los valores a letras y las concatena
