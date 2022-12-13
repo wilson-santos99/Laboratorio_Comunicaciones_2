@@ -1,5 +1,5 @@
 def cifrado_cesar (txt):   #funcion cuyo argumento es el texto que se ingresara por consolda 
-    posicion1 = int(input(("Ingrese la llave")))
+    posicion1 = int(input(("Ingrese la llave>>: "))) #solicita el numero de posiciones que se movera hacia la derecha
     alfabeto_min = "abcdefghijklmnopqrstuvwxyz"  #creamos variable con alfabetro en minusculas
     alfabeto_may = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" #creamos variable con alfabeto en mayusculas
     longitud_alfabeto = len(alfabeto_min) #determinamos la longitud de la variable alfabeto
@@ -19,7 +19,7 @@ def cifrado_cesar (txt):   #funcion cuyo argumento es el texto que se ingresara 
     return codificado_cesar #devuelve la variable codificado_cesar
 
 def descifrado_cesar(mensaje):
-    posicion1 = int(input(("Ingrese la llave")))
+    posicion1 = int(input(("Ingrese la llave>>: "))) #solicita el numero de posiciones que se movio a la derecha el texto original
     alfabeto_min = "abcdefghijklmnopqrstuvwxyz" #creamos variable con alfabetro en minusculas
     alfabeto_may = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" #creamos variable con alfabetro en minusculas
     longitud_alfabeto = len(alfabeto_min) #determinamos la longitud de la variable alfabeto
@@ -50,8 +50,6 @@ def menu():  # creamos el menu de nuestro programa
     print("#    \t2 - DESCIFRAR                                              #")               #opcion 2
     print("####################################################################")
 
-
-
 while (True):  ##se establece el ciclo infinito
     menu() # llamamos a la funcion menù
     opcion = int(input("inserta un numero valor>>: ")) #solicitamos al usuaro digitar una opcion
@@ -66,4 +64,7 @@ while (True):  ##se establece el ciclo infinito
         #os.system('cls') # NOTA para windows tienes que cambiar clear por cls
     else:
         tipo_cifrado = int(input("Elegir un cifrado valido: ")) #si ingresamos un numero invalido muestra mensaje
+
+
+
 
