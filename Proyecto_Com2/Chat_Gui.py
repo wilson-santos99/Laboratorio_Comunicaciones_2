@@ -4,6 +4,7 @@ from operator import xor
 import random
 from sympy import Matrix
 import numpy as np
+
 FONT = ("calbri", 20, "bold")
 class Interfaz:
     def __init__(self, master):
